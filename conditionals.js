@@ -1,4 +1,4 @@
-let pin=1234;
+let pin=Number(prompt("Enter pin number:"));
 let orgpin=1234;
 let bal=70000;
 if(pin==orgpin)
@@ -10,11 +10,11 @@ if(pin==orgpin)
     2.Deposit
     3.Exit`)
 
-let option=2;
+let option=Number(prompt("Enter your option:"));
 switch(option)
 {
     case 1:
-        let wdamt=6000;
+        let wdamt=Number(prompt("Enter amount to withdraw:"));
         if(wdamt<=bal && wdamt<10001)
         {
             bal=bal-wdamt;
@@ -32,7 +32,7 @@ switch(option)
             break;
         }
     case 2:
-        let depamt=1000;
+        let depamt=Number(prompt("Enter the amount to deposit:"));
         bal+=depamt;
         console.log("Balance after Deposition:"+bal);
         break;
